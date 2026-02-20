@@ -12,11 +12,11 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Cache dependencies
-        id: cache-step
+        id: cache
         uses: actions/cache@v4
         with:
           path: ~/.cache/demo
           key: cache-5edcd6e
 
       - name: prime-cache-5edcd6e
-        run: echo "Cache hit? ${{ steps.cache-step.outputs.cache-hit }}"
+        run: echo "Cache hit? ${{ steps.cache.outputs.cache-hit }}"
