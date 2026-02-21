@@ -15,4 +15,5 @@ jobs:
           path: ~/.cache
           key: cache-5edcd6e
       - name: prime-cache-5edcd6e
+        id: prime-cache-5edcd6e
         run: echo "Cache hit ${{ steps.cache-deps.outputs.cache-hit }}"
